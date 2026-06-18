@@ -1,205 +1,103 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>数学とか留学とか</title>
-  <style>
-    :root {
-      --bg: #0b1b3a;
-      --panel: #10264d;
-      --panel-hover: #16356a;
-      --text: #ffffff;
-      --muted: #c9d6f2;
-      --border: rgba(255, 255, 255, 0.14);
-      --shadow: rgba(0, 0, 0, 0.28);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学とか留学とか</title>
 
-    * {
-      box-sizing: border-box;
-    }
+    <style>
+        body {
+            margin: 0;
+            background-color: #0b1f4d;
+            color: white;
+            font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 240px;
+            height: 100vh;
+            background-color: #081633;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
 
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.8;
-    }
+        .site-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
 
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 260px;
-      height: 100vh;
-      padding: 24px 18px;
-      background: rgba(7, 16, 36, 0.92);
-      border-right: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      z-index: 1000;
-    }
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: 0.2s;
+        }
 
-    .site-title {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      line-height: 1.3;
-    }
+        .menu a:hover {
+            background-color: #14306d;
+        }
 
-    .nav {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+        .content {
+            margin-left: 240px;
+            padding: 60px;
+            max-width: 900px;
+        }
 
-    .nav a {
-      display: block;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      text-decoration: none;
-      color: var(--text);
-      background: var(--panel);
-      box-shadow: 0 8px 24px var(--shadow);
-      font-size: 1rem;
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-    }
+        h1 {
+            font-size: 3rem;
+            margin-top: 0;
+        }
 
-    .nav a:hover {
-      background: var(--panel-hover);
-      border-color: rgba(255, 255, 255, 0.28);
-      transform: translateX(4px);
-    }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
 
-    .nav-note {
-      margin-top: auto;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
+        @media (max-width: 800px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
 
-    .content {
-      margin-left: 260px;
-      min-height: 100vh;
-      padding: 40px 48px 72px;
-    }
-
-    .hero {
-      max-width: 920px;
-      padding: 28px 0 40px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      line-height: 1.15;
-    }
-
-    .hero p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .section {
-      max-width: 920px;
-      padding: 34px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 1.7rem;
-    }
-
-    .section p {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .placeholder {
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    @media (max-width: 800px) {
-      .sidebar {
-        position: sticky;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .content {
-        margin-left: 0;
-        padding: 24px 18px 56px;
-      }
-
-      .nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .nav a {
-        flex: 1 1 160px;
-        text-align: center;
-      }
-
-      .nav-note {
-        margin-top: 0;
-      }
-    }
-  </style>
+            .content {
+                margin-left: 0;
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <aside class="sidebar">
-    <h1 class="site-title">数学とか留学とか</h1>
 
-    <nav class="nav" aria-label="ページナビゲーション">
-      <a href="#profile">自己紹介</a>
-      <a href="#portfolio">ポートフォリオ</a>
-      <a href="#diary">日記</a>
-      <a href="#thoughts">思想</a>
-    </nav>
+    <div class="sidebar">
+        <div class="site-title">
+            数学とか留学とか
+        </div>
 
-    <div class="nav-note">左のボタンで各ページへ移動</div>
-  </aside>
+        <div class="menu">
+            <a href="profile.html">自己紹介</a>
+            <a href="portfolio.html">ポートフォリオ</a>
+            <a href="diary.html">日記</a>
+            <a href="thoughts.html">思想</a>
+        </div>
+    </div>
 
-  <main class="content">
-    <section class="hero">
-      <h1>本文</h1>
-      <p>ここにあとで自由に文章を追加できます。</p>
-    </section>
+    <div class="content">
+        <h1>数学とか留学とか</h1>
 
-    <section class="section" id="profile">
-      <h2>自己紹介</h2>
-      <p class="placeholder">本文</p>
-    </section>
+        <p>
+            本文
+        </p>
+    </div>
 
-    <section class="section" id="portfolio">
-      <h2>ポートフォリオ</h2>
-      <p class="placeholder">本文</p>
-    </section>
-
-    <section class="section" id="diary">
-      <h2>日記</h2>
-      <p class="placeholder">本文</p>
-    </section>
-
-    <section class="section" id="thoughts">
-      <h2>思想</h2>
-      <p class="placeholder">本文</p>
-    </section>
-  </main>
 </body>
 </html>
