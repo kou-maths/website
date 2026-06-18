@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日記 | 数学とか留学とか</title>
 
+    <style>
+        body {
+            margin: 0;
+            background-color: #0b1f4d;
+            color: white;
+            font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
+            line-height: 1.8;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 240px;
+            height: 100vh;
+            background-color: #081633;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .site-title a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .menu a:hover {
+            background-color: #14306d;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 60px;
+            max-width: 980px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            color: rgba(255,255,255,0.88);
+            font-size: 1.05rem;
+            margin-bottom: 36px;
+        }
+
+        .entry-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .entry-card {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 18px;
+            align-items: stretch;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.04);
+            overflow: hidden;
+        }
+
+        .entry-photo {
+            min-height: 160px;
+            background: rgba(255,255,255,0.08);
+            border-right: 1px solid rgba(255,255,255,0.16);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .entry-body {
+            padding: 18px 20px 20px 0;
+        }
+
+        .entry-date {
+            margin: 0 0 8px;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.72);
+            letter-spacing: 0.03em;
+        }
+
+        .entry-title {
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .entry-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border: 1px solid rgba(255,255,255,0.22);
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        .entry-link:hover {
+            background-color: #14306d;
+        }
+
+        .template-box {
+            margin-top: 42px;
+            padding: 20px;
+            border: 1px dashed rgba(255,255,255,0.28);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .template-box h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .template-box code {
+            display: block;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.98rem;
+        }
+
+        @media (max-width: 800px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 30px;
+            }
+
+            .entry-card {
+                grid-template-columns: 1fr;
+            }
+
+            .entry-photo {
+                min-height: 140px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.16);
+            }
+
+            .entry-body {
+                padding: 0 18px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="site-title">
+            <a href="index.html">数学とか留学とか</a>
+        </div>
+
+        <div class="menu">
+            <a href="profile.html">自己紹介</a>
+            <a href="portfolio.html">ポートフォリオ</a>
+            <a href="diary.html">日記</a>
+            <a href="thoughts.html">思想</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>日記</h1>
+        <p class="intro">ここは一覧ページです。各日付の本文は別ページに分けて、写真とタイトルだけをここに並べます。</p>
+
+        <div class="entry-list">
+            <article class="entry-card">
+                <div class="entry-photo">写真をここに入れる</div>
+                <div class="entry-body">
+                    <p class="entry-date">2026-06-19</p>
+                    <h2 class="entry-title">今日のこと</h2>
+                    <a class="entry-link" href="diary-2026-06-19.html">本文ページへ</a>
+                </div>
+            </article>
+
+            <article class="entry-card">
+                <div class="entry-photo">写真をここに入れる</div>
+                <div class="entry-body">
+                    <p class="entry-date">2026-06-18</p>
+                    <h2 class="entry-title">散歩と数学のメモ</h2>
+                    <a class="entry-link" href="diary-2026-06-18.html">本文ページへ</a>
+                </div>
+            </article>
+
+            <article class="entry-card">
+                <div class="entry-photo">写真をここに入れる</div>
+                <div class="entry-body">
+                    <p class="entry-date">2026-06-17</p>
+                    <h2 class="entry-title">勉強の途中経過</h2>
+                    <a class="entry-link" href="diary-2026-06-17.html">本文ページへ</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="template-box">
+            <h2>追加するときの型</h2>
+            <code>&lt;article class="entry-card"&gt;
+    &lt;div class="entry-photo"&gt;写真をここに入れる&lt;/div&gt;
+    &lt;div class="entry-body"&gt;
+        &lt;p class="entry-date"&gt;YYYY-MM-DD&lt;/p&gt;
+        &lt;h2 class="entry-title"&gt;タイトル&lt;/h2&gt;
+        &lt;a class="entry-link" href="diary-YYYY-MM-DD.html"&gt;本文ページへ&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</code>
+        </div>
+    </div>
+
+</body>
+</html>
