@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>思想 | 数学とか留学とか</title>
 
+    <style>
+        body {
+            margin: 0;
+            background-color: #0b1f4d;
+            color: white;
+            font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
+            line-height: 1.8;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 240px;
+            height: 100vh;
+            background-color: #081633;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .site-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .site-title a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .menu a:hover {
+            background-color: #14306d;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 60px;
+            max-width: 980px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            color: rgba(255,255,255,0.88);
+            font-size: 1.05rem;
+            margin-bottom: 36px;
+        }
+
+        .entry-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .entry-card {
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.04);
+            padding: 22px 22px 20px;
+        }
+
+        .entry-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 14px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .entry-date {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.72);
+            letter-spacing: 0.03em;
+        }
+
+        .entry-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border: 1px solid rgba(255,255,255,0.22);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .entry-title {
+            margin: 0 0 10px;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .entry-summary {
+            margin: 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.02rem;
+        }
+
+        .entry-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border: 1px solid rgba(255,255,255,0.22);
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        .entry-link:hover {
+            background-color: #14306d;
+        }
+
+        .template-box {
+            margin-top: 42px;
+            padding: 20px;
+            border: 1px dashed rgba(255,255,255,0.28);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .template-box h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .template-box code {
+            display: block;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.98rem;
+        }
+
+        @media (max-width: 800px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="site-title">
+            <a href="index.html">数学とか留学とか</a>
+        </div>
+
+        <div class="menu">
+            <a href="profile.html">自己紹介</a>
+            <a href="portfolio.html">ポートフォリオ</a>
+            <a href="diary.html">日記</a>
+            <a href="thoughts.html">思想</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>思想</h1>
+        <p class="intro">日々の考え、読んだ本や見聞きしたことから生まれた考察を残すページです。ここは日記より少し文章を中心にして、各投稿の本文は別ページに分ける形にしています。</p>
+
+        <div class="entry-list">
+            <article class="entry-card">
+                <div class="entry-top">
+                    <p class="entry-date">2026-06-19</p>
+                    <span class="entry-tag">数学観</span>
+                    <span class="entry-tag">メモ</span>
+                </div>
+                <h2 class="entry-title">数学を書くことと考えること</h2>
+                <p class="entry-summary">数学の証明や定義は、単に結果を並べるものではなく、考え方そのものを整えるための装置だと思っている。</p>
+                <a class="entry-link" href="thoughts-2026-06-19.html">本文ページへ</a>
+            </article>
+
+            <article class="entry-card">
+                <div class="entry-top">
+                    <p class="entry-date">2026-06-18</p>
+                    <span class="entry-tag">教育</span>
+                    <span class="entry-tag">留学</span>
+                </div>
+                <h2 class="entry-title">学ぶ場所が変わると視点も変わる</h2>
+                <p class="entry-summary">日本、アメリカ、イギリスでの学びを通じて、同じ数学でも見方や説明の流儀がかなり違うことを実感した。</p>
+                <a class="entry-link" href="thoughts-2026-06-18.html">本文ページへ</a>
+            </article>
+
+            <article class="entry-card">
+                <div class="entry-top">
+                    <p class="entry-date">2026-06-17</p>
+                    <span class="entry-tag">生活</span>
+                    <span class="entry-tag">雑記</span>
+                </div>
+                <h2 class="entry-title">落ち着いて書ける場所を作る</h2>
+                <p class="entry-summary">考えを短くでも残せる場所があると、頭の中の整理がしやすくなる。ここではその役割を持たせたい。</p>
+                <a class="entry-link" href="thoughts-2026-06-17.html">本文ページへ</a>
+            </article>
+        </div>
+
+        <div class="template-box">
+            <h2>追加するときの型</h2>
+            <code>&lt;article class="entry-card"&gt;
+    &lt;div class="entry-top"&gt;
+        &lt;p class="entry-date"&gt;YYYY-MM-DD&lt;/p&gt;
+        &lt;span class="entry-tag"&gt;タグ1&lt;/span&gt;
+        &lt;span class="entry-tag"&gt;タグ2&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;h2 class="entry-title"&gt;タイトル&lt;/h2&gt;
+    &lt;p class="entry-summary"&gt;要旨を1〜2文で書く。&lt;/p&gt;
+    &lt;a class="entry-link" href="thoughts-YYYY-MM-DD.html"&gt;本文ページへ&lt;/a&gt;
+&lt;/article&gt;</code>
+        </div>
+    </div>
+
+</body>
+</html>
