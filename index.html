@@ -17,14 +17,15 @@
     <style>
         body {
             margin: 0;
-            display: flex;
             background-color: #0b1f4d;
             color: white;
             font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
         }
 
         .sidebar {
-            flex: 0 0 240px;
+            position: fixed;
+            left: 0;
+            top: 0;
             width: 240px;
             height: 100vh;
             background-color: #081633;
@@ -54,7 +55,7 @@
         }
 
         .content {
-            flex: 1;
+            margin-left: 240px;
             padding: 60px;
             max-width: 900px;
         }
@@ -69,19 +70,18 @@
             line-height: 1.8;
         }
 
-       @media (max-width: 800px) {
-    body {
-        display: block;
-    }
-    .sidebar {
-        width: 100%;
-        min-height: auto;
-    }
-    .content {
-        max-width: none;
-        padding: 30px;
-    }
-}
+        @media (max-width: 800px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -106,8 +106,7 @@
         <p>
             日頃の活動を記録していく個人のホームページです。
         </p>
-    </div>
-  <script src="https://giscus.app/client.js"
+         <script src="https://giscus.app/client.js"
         data-repo="kou-maths/website"
         data-repo-id="R_kgDOQzvcpA"
         data-category-id="DIC_kwDOQzvcpM4C_oSU"
@@ -121,5 +120,7 @@
         crossorigin="anonymous"
         async>
 </script>
+    </div>
 </body>
+
 </html>
