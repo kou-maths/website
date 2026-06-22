@@ -54,7 +54,7 @@
         }
 
         .content {
-            margin-left: 240px;
+            flex: 1;
             padding: 60px;
             max-width: 900px;
         }
@@ -69,18 +69,19 @@
             line-height: 1.8;
         }
 
-        @media (max-width: 800px) {
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-            }
-
-            .content {
-                margin-left: 0;
-                padding: 30px;
-            }
-        }
+       @media (max-width: 800px) {
+    body {
+        display: block;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+    .content {
+        max-width: none;
+        padding: 30px;
+    }
+}
     </style>
 </head>
 
